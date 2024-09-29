@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Glamora</title>
+   <!-- boootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+   <!-- aos -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <!-- stylecss -->
+   <link rel="stylesheet" href="shop.css">
+   <!-- x-icon -->
+   <link rel="icon" type="image/x-icon" href="img/2full.png">
+</head>
+<body>
+   
+    <!-- navbar desktop-->
+    <section class="navbar-desktop">
+        <div class="container-fluid">
+      <div class="container">
+          <ul class="nav justify-content-center text-dark" id="header" style="font-family: Questrial, sans-serif;">
+              <li class="nav-item">
+                <a class="nav-link" href="fashion.html">Fashion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="beauty.html">Beauty</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="index.html"><img src="img/1.png" style="width: 100px;"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+              <i class="ri-shopping-bag-line"></i>
+            </a>
+            </li>
+          </div>
+        </div>
+    </section>
+
+    <!-- navbar tablet, hp-->
+    <section class="navbar-mobile">
+      <div class="container-fluid">
+        <div class="container d-flex justify-content-evenly">
+          <button class="btn" type="button">
+          <img src="img/1.png" style="width: 100px;">
+        </button>
+          <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+          <i class="ri-menu-2-line text-dark"></i>
+        </button>
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Glamora</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="d-flex flex-column">
+              <a href="index.html" class="mt-3 text-uppercase fn-q text-dark" >Home</a>
+              <a href="fashion.html" class="mt-3 text-uppercase fn-q text-dark" >Fashion</a>
+              <a href="beauty.html" class="mt-3 text-uppercase fn-q text-dark" >Beauty</a>
+              <a href="shop.html" class="mt-3 text-uppercase fn-q text-dark" >Shop</a>
+              <a class="mt-3 text-uppercase fn-q text-dark" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                <i class="ri-shopping-bag-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="opening">
+      <div class="container-fluid">
+        <!-- FOTO DARI CANVA -->
+        <img src="img/shop-open.jpg" class="shop-open">
+        <div class="container">
+        </div>
+      </div>
+    </section>
+  
+     <!-- ================ SEMUA FOTO DARI ZALORA ================= -->
+    <section class="opening-product" style="margin-top: 50px;">
+      <div class="container-fluid">
+        <div class="continer">
+          <h1 class="coral text-center fn-a">Style Yourself with the Latest Trends and Pamper Your Skin with Top-Quality Products.</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="collapseee">
+      <div class="container-fluid mt-3">
+        <div class="container">
+            <div class="button-container d-flex justify-content-center g-20">
+              <button class="button-value fn-q text-uppercase mx-3" onclick="toggleClothes()">Clothes</button>
+              <button class="button-value fn-q text-uppercase mx-3" onclick="toggleSkincare()">Skincare</button>
+              <button class="button-value fn-q text-uppercase mx-3" onclick="toggleMakeup()">Make Up</button>
+             </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="modalCopy">
+       <!-- Modal clothes-->
+       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fn-q fw-bold" id="exampleModalLabel">Detail Product</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ul>
+                <li>Solid tone flowy maxi dress</li>
+                <li>Unlined</li>
+                <li>Square neckline</li>
+                <li>Slim fit</li>
+                <li>Slip on style</li>
+                <li>Polyester blend</li>
+                <h6 class="fw-bold fn-q mt-2">Made in Turkiye</h6>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <!-- Modal skincare-->
+        <div class="modal fade" id="skincareModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5 fn-q fw-bold" id="exampleModalLabel">Detail Product</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h6 class="fw-bold fn-q mt-2">The first no-transfer lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation. Composed with 95% natural-origin ingredients, Lip Tint is infused with Cherry Oil to hydrate lips for 24h and thereby provide long-lasting comfort. Available in a palette of fresh and natural shades, such as beige, raspberry, vibrant coral or even intense plum, this Dior lip tint flatters all skin tones and beautifies them.
+                  BPOM NO. NC14231300036</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <!-- Modal makeup-->
+       <div class="modal fade" id="makeupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5 fn-q fw-bold" id="exampleModalLabel">Detail Product</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6 class="fw-bold fn-q mt-2">The first no-transfer lip tint with 12h wear, that highlights the lips with a bold color in a semi-matte finish and fuses with the skin for a bare-lip sensation. Composed with 95% natural-origin ingredients, Lip Tint is infused with Cherry Oil to hydrate lips for 24h and thereby provide long-lasting comfort. Available in a palette of fresh and natural shades, such as beige, raspberry, vibrant coral or even intense plum, this Dior lip tint flatters all skin tones and beautifies them.
+                  BPOM NO. NC14231300036</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clothes" id="product-cards">
+      <div class="container-fluid mt-5">
+        <div class="container">
+
+          
+          <div class="row g-4">
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (1).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Slit Maxi Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (2).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Floral Dress</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (3).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Patricia Twist Dress</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (4).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Denim Dress With Waist</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (5).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Flutter Sleeve Ruched </h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>             
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (6).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Strappy Slit Maxi Dress</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>             
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (15).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Ruffle Mini Dress</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div> 
+            </div>
+
+              <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+                <div class="card h-100 show box-clothes" id="clothes">
+                  <img src="img/product (16).jpg" class="card-img-top shop-item-image" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title shop-item-title">Cut Out Maxi Dress</h5>
+                    <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (7).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Animal Flounce Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (8).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Woven Evening Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (9).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Printed Puff Sleeve Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (10).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">One Shoulder Slit Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (11).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Mini Knitted Tie Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (12).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Cut Out Detailed Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (13).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Floral Ruffle Detail Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new clothes">
+              <div class="card h-100 show box-clothes" id="clothes">
+                <img src="img/product (17).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Flowy Dress</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                  <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="skincare" id="product-cards" style="margin-top: -70px;">
+      <div class="container-fluid">
+        <div class="container">
+
+          <div class="row g-4">
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (46).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">5x Ceramide Moisture</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (45).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Msh Niacinamide Moisture</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (43).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Glycolic Acid Toner</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (33).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Brightening Cleanser</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (32).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">5x Ceramide Sunscreen</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (57).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Hyalucera Moisturizer</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (56).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Hyalurose Micellar Water</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (55).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Cica-B5 Soothing Toner</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (52).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Mugwort B3 Clay Stick</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (53).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Charcoal Clay Stick</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new skincare">
+              <div class="card h-100 show box-skincare" id="skincare">
+                <img src="img/product (54).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Hyalu-C Serum</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#skincareModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="makeup" id="product-cards" style="margin-top: -50px;">
+      <div class="container-fluid">
+        <div class="container">
+
+          <div class="row g-4">
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (34).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Matte & Satin Lipstick Dusty Rose</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (35).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Benefit - Fan Fest Mascara Mini</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (36).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">DIOR Addict Lip Tint Natural</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (38).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Goban Black Diamond Liquid Eyeliner-Pen</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (39).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Goban Sunkissed Matte Bronzing Powder</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (40).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Tail Lasting Sharp Pen Liner</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (41).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title">Translucent Loose Setting Powder 29g </h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-4 col-sm-12 filter-item all new makeup">
+              <div class="card h-100 show box-makeup" id="makeup">
+                <img src="img/product (51).jpg" class="card-img-top shop-item-image" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title"> Holika Mellow Blurring Lip Pencil</h5>
+                  <p class="card-text shop-item-price"> Rs 6990.00</p>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#makeupModal" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button">Detail</button>
+                    <button type="button" style="width: 100%;" class="btn btn-light bg-btn mt-auto shop-item-button"><i class="ri-shopping-bag-line"></i></button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="off-canvas-cart" id="shopping-cart">
+      <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="cartOffcanvasLabel">Your Shopping Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            
+            <h3 style="text-align: center; margin-bottom: 5%;">Shopping Cart</h3>
+          
+            <table class="table table-hover table-cart">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+              </tr>
+            </thead>
+            <tbody class="cart-items">
+              
+                
+            </tbody>
+          </table>
+          
+              <div class="cart-total"> 
+                <strong class="cart-total-title">Total</strong>
+                <span  class="cart-total-price" style="text-align: right;">$0</span>
+              </div>
+            
+          
+              <div class="btn-purchase" style="margin-top: 10%;">
+                <button type="button"  class="btn btn-dark btn-purchase "><i class="fa-solid fa-cart-shopping " style="margin-right: 6%;"></i>PURCHASE</button>
+              </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container-fluid ">
+        <div class="container d-flex justify-content-evenly rirr" style="border-radius: 20px; padding: 20px; background: #921A40;">
+              <h4 class="text-light fw-bold">Enhance Your Look with Glamora's Best Beauty Products</h4>
+              <div class="input-group">
+                <input type="text" class="form-control" style="padding: 20px 20px" placeholder="Enter Your Gmail" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+                <button class="btn btn-outline-dark" type="reset" id="button-addon2" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">Subscribe</button>
+              </div>
+            </div>
+  
+            <hr style="color:white;">
+            <div class="row ftr" style="margin-top: 10px;">
+              <div class="col d-flex flex-column rorr">
+                <h6>Company</h6>
+                <a href="beranda.html">Beranda</a>
+                <a href="bootcamp.html">Bootcamp</a>
+                <a href="layanan.html">Layanan</a>
+              </div>
+              <div class="col d-flex flex-column rorr">
+                <h6>Help</h6>
+                <a href="#">Customer Report</a>
+                <a href="#">Delivary Details</a>
+                <a href="#">Privacy Policy</a>
+              </div>
+              <div class="col d-flex flex-column rorr">
+                <h6>Resources</h6>
+                <a href="#">Free E-books</a>
+                <a href="#">Development Tutorial</a>
+                <a href="#">How to - blog</a>
+              </div>
+              <div class="col d-flex flex-column rorr mb-2">
+                <h6>Links</h6>
+                <a href="#">Free E-books</a>
+                <a href="#">Development Tutorial</a>
+                <a href="#">How to - blog</a>
+              </div>
+  
+            <!-- <hr style="color:white;">
+            <p class="text-light text-center">Copyright @2024</p> -->
+            
+            </div>
+      </div>
+    </section>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="shop.js"></script>
+  </body>
+  </html>

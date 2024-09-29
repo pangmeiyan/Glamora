@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Glamora</title>
+    <!-- boootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- stylecss -->
+    <link rel="stylesheet" href="style.css">
+    <!-- x-icon -->
+    <link rel="icon" type="image/x-icon" href="img/2full.png">
+  </head>
+  <body>
+   
+    <!-- navbar desktop-->
+    <section class="navbar-desktop">
+          <div class="container-fluid">
+        <div class="container">
+            <ul class="nav justify-content-center text-dark" id="header" style="font-family: Questrial, sans-serif;">
+                <li class="nav-item">
+                  <a class="nav-link" href="fashion.html">Fashion</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="beauty.html">Beauty</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="index.html"><img src="img/1.png" style="width: 100px;"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                <i class="ri-shopping-bag-line"></i>
+              </a>
+              </li>
+            </div>
+          </div>
+    </section>
+  
+    <!-- navbar tablet, hp-->
+    <section class="navbar-mobile">
+        <div class="container-fluid">
+          <div class="container d-flex justify-content-evenly">
+            <button class="btn" type="button">
+            <img src="img/1.png" style="width: 100px;">
+          </button>
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+            <i class="ri-menu-2-line text-dark"></i>
+          </button>
+          <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="staticBackdropLabel">Glamora</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="d-flex flex-column">
+                <a href="index.html" class="mt-3 text-uppercase fn-q text-dark" >Home</a>
+                <a href="fashion.html" class="mt-3 text-uppercase fn-q text-dark" >Fashion</a>
+                <a href="beauty.html" class="mt-3 text-uppercase fn-q text-dark" >Beauty</a>
+                <a href="shop.html" class="mt-3 text-uppercase fn-q text-dark" >Shop</a>
+                <a class="mt-3 text-uppercase fn-q text-dark" href="#" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                  <i class="ri-shopping-bag-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+  
+          </div>
+        </div>
+    </section>
+
+   <!-- header tulisan pembukaan -->
+   <section class="header-tulisan">
+    <div class="container-fluid mt-5">
+      <div class="container">
+
+        <div class="row text-left mt-2">
+          <div class="col-12 col-sm-12" data-aos="fade-right" data-aos-duration="2000" style="width: 100%; overflow-y: hidden;">
+            <h1 class="fw-bold ror fn-a">Dive into a world of endless fashion possibilities</h1>
+          </div>
+          <div class="col col-sm-12" data-aos="fade-left" data-aos-duration="2000" style="width: 100%">
+            <h6 class="rir">Elevate your Wardrobe with our Fashione Finds.
+              <br>Discover Your Signature Style at Fashion Avenue.</h6>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </section>
+
+   <!-- ================ SEMUA FOTO DARI ZALORA ================= -->
+
+   <!-- header foto pembukaan -->
+   <section class="header-foto">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row  mt-5">
+          <div class="col-sm-12 col-md-4 col-xxl-4" data-aos="fade-right" data-aos-duration="2000">
+            <img src="img/asset1.jpg" class="img-fluid asset1" style="width: 900px;">
+           </div>
+          <div class="col-sm-12 col-md-4 col-xxl-4" data-aos="fade-left" data-aos-duration="2000">
+            <img src="img/asset2.jpg" class="img-fluid asset2">
+          </div>
+          <div class="col-sm-12 col-md-4 col-xxl-4" data-aos="fade-right" data-aos-duration="2000">
+            <img src="img/asset3.jpg" class="img-fluid asset3" style="width: 900px;">
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <a href="fashion.html">
+            <button class="btn btn-light bg-btn btn-lg" type="button">Explore More</button>
+          </a>
+        </div>
+        </div>
+    </div>
+   </section>
+
+   <!-- beauty -->
+   <section class="beauty">
+    <div class="container-fluid mt-5 bg-pin">
+      <div class="container mt-5" data-aos="zoom-in-right" data-aos-duration="2000">
+        <div class="row ps-5 pe-5">
+          <div class="col-xl-7 col-md-6 col-sm-12" >
+            <img src="img/asset4.png" class="img-fluid w-100% rounded">
+          </div>
+          <div class="col-xl-5 col-md-6 col-sm-12 mt-xl-2" data-aos="zoom-in-left" data-aos-duration="2000">
+            <h1 class="1h-lg text-right fn-q text-uppercase  jir">Beauty is the confidence to embrace your unique self, radiating from within and shining through every smile</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <!-- beauty shop  -->
+   <section class="beauty-shop">
+    <div class="container-fluid mt-5">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="1000">
+            <img src="img/asset5.png" class="img-fluid asset5">
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="1500">
+            <img src="img/asset6.png" class="img-fluid asset6">
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="2000">
+            <img src="img/asset7.png" class="img-fluid asset7">
+          </div>
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="2500">
+            <img src="img/asset8.png" class="img-fluid asset8">
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <a href="beauty.html">
+            <button class="btn btn-light bg-btn btn-lg" type="button">Explore More</button>
+          </a>
+        </div>
+      </div>
+    </div>
+   </section>
+
+   <!-- product -->
+   <section class="product">
+    <div class="container-fluid mt-5">
+      <div class="container mt-5">
+        <h1 class="coral fw-bold fn-a text-center">Your Ultimate Fashion and Skincare Guide to Look and Feel Fabulous.</h1>
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-left" data-aos-duration="500">
+            <div class="card">
+              <img src="img/product (18).png" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-left" data-aos-duration="1000">
+            <div class="card">
+              <img src="img/product (30).jpg" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-left" data-aos-duration="1500">
+            <div class="card">
+              <img src="img/product (25).png" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                 <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-left" data-aos-duration="2000">
+            <div class="card">
+              <img src="img/product (27).png" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-right" data-aos-duration="500">
+            <div class="card">
+              <img src="img/product (46).jpg" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-right" data-aos-duration="1000">
+            <div class="card">
+              <img src="img/product (36).jpg" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-right" data-aos-duration="1500">
+            <div class="card">
+              <img src="img/product (43).jpg" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-xl-3" data-aos="fade-down-right" data-aos-duration="2000">
+            <div class="card">
+              <img src="img/product (44).jpg" class="img-fluid">
+              <div class="layer">
+                <div class="overlay">
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html" class="text-uppercase coral">Explore More</a>
+                  </button>
+                  <button type="button" class="btn btn-light product-btn fn-q bg-button">
+                    <a href="shop.html"><i class="ri-shopping-bag-fill coral"></i></a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </section>
+
+   <section class="footer">
+    <div class="container-fluid ">
+      <div class="container d-flex justify-content-evenly rirr" style="border-radius: 20px; padding: 20px; background: #921A40;">
+            <h4 class="text-light fw-bold">Enhance Your Look with Glamora's Best Beauty Products</h4>
+            <div class="input-group">
+              <input type="text" class="form-control" style="padding: 20px 20px" placeholder="Enter Your Gmail" aria-label="Recipient's username" aria-describedby="button-addon2" required>
+              <button class="btn btn-outline-dark" type="reset" id="button-addon2" style="border-top-right-radius: 5px; border-bottom-right-radius: 5px;">Subscribe</button>
+            </div>
+          </div>
+
+          <hr style="color:white;">
+          <div class="row ftr" style="margin-top: 10px;">
+            <div class="col d-flex flex-column rorr">
+              <h6>Company</h6>
+              <a href="beranda.html">Beranda</a>
+              <a href="bootcamp.html">Bootcamp</a>
+              <a href="layanan.html">Layanan</a>
+            </div>
+            <div class="col d-flex flex-column rorr">
+              <h6>Help</h6>
+              <a href="#">Customer Report</a>
+              <a href="#">Delivary Details</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+            <div class="col d-flex flex-column rorr">
+              <h6>Resources</h6>
+              <a href="#">Free E-books</a>
+              <a href="#">Development Tutorial</a>
+              <a href="#">How to - blog</a>
+            </div>
+            <div class="col d-flex flex-column rorr mb-2">
+              <h6>Links</h6>
+              <a href="#">Free E-books</a>
+              <a href="#">Development Tutorial</a>
+              <a href="#">How to - blog</a>
+            </div>
+
+          <!-- <hr style="color:white;">
+          <p class="text-light text-center">Copyright @2024</p> -->
+          
+          </div>
+    </div>
+  </section>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    AOS.init();
+
+    var nav = document.getElementById("header")
+    window.addEventListener("scroll", ()=> {
+      if(document.documentElement.scrollTop > 100){
+          nav.classList.add("sticky");
+      }else{
+          nav.classList.remove("sticky");
+      }
+    })
+  </script>
+</body>
+</html>

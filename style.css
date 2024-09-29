@@ -1,0 +1,251 @@
+@font-face {
+   font-family: 'SS Angelica', sans-serif;
+   src: url('glamora/ss-angelica/SS Angelica.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'brown-sugar', sans-serif;
+  src: url('glamora/brown-sugar/brown-sugar.ttf') format('truetype');
+}
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+   text-decoration: none;
+}
+body{
+   background-position: center;
+   background-size: cover;
+   width: 100%;
+   background-color: #FAF7F0;
+   text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+#header .nav-item .nav-link{
+  color: black;
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+#header::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(100px);
+  z-index: -1;
+}
+#header.sticky {
+  box-shadow: 0 0 10px 0 black;
+  background-color: rgba(200, 15, 107, 0.17);
+  backdrop-filter: blur(100px);
+}
+.fn-q{
+   font-family: "Questrial", sans-serif;
+}
+.fn-a{
+   font-family: 'SS Angelica', sans-serif;
+}
+.coral{
+  color: #921A40;
+}
+.bg-pink{
+  background-color: #FFABAB;
+}
+a{
+  text-decoration: none;
+}
+.bg-btn{
+  background-color: #921A40;
+  color:#FAF7F0;
+}
+.ror{
+   font-size: 80px;
+   text-transform: uppercase;
+   line-height: 100px;
+   color: #921A40;
+}
+.rir{
+   font-family: "Questrial", sans-serif;
+   text-transform: uppercase;
+   font-size: 20px;
+   line-height: 30px;
+   color: #921A40;
+}
+.asset1:hover, 
+.asset2:hover, 
+.asset3:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease;
+}
+.jir{
+   color:#921A40;
+}
+.asset5, .asset6, .asset7, .asset8{
+   width: 100%;
+}
+.card{
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background:linear-gradient(rgba(0,0,0,0.1), #921A40);
+}
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.8s;
+}
+.card:hover .layer {
+ height:100%;
+}
+.layer {
+  width:100%;
+  height:0;
+  position:absolute;
+  border-radius:8px;
+  left:0;
+  bottom:0;
+  overflow: hidden;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+  text-align:center;
+}
+.overlay {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 22px;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px; 
+}
+.product-btn{
+  z-index: 11111;
+}
+/* ----- footer start ----- */
+.ftr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer{
+  width: 100%;
+  margin-top: 150px;
+}
+.rirr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FAF7F0;
+  background-color: #921A40;
+}
+.rorr h6{
+  margin: 10px;
+  color: #921A40;
+}
+.rorr a{
+  text-decoration: none;
+  color: #921A40;
+  margin: 10px;
+}
+.rorr a:hover{
+  transform: translateX(20px);
+  transition: 0.7s;
+}
+/* mattin overflow */
+.header-tulisan h1{
+   overflow: hidden;
+}
+/* responsive */
+@media (min-width: 576px){
+  .navbar-desktop{
+    display: block;
+  }
+  .navbar-mobile{
+    display: none;
+  }
+}
+@media (max-width: 576px){
+  .navbar-desktop{
+    display: none;
+  }
+  .navbar-mobile{
+    display: block;
+  }
+  .header-tulisan .container .ror{
+    font-size: 55px;
+    line-height: 70px;
+  }
+  .header-tulisan .container .rir{
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .header-foto .container .row{
+    gap:20px;
+  }
+  .beauty .container .jir{
+    line-height: 25px;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .beauty-shop .container .row{
+    gap: 20px;
+  }
+  .product .container .row{
+    gap: 50px;
+  }
+}
